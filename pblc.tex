@@ -343,6 +343,66 @@
   }
 \end{table}
 
+\begin{table}[htbp]
+  \caption{Caso de Uso para Avaliar Universidade} 
+  \label{tab:avaliarUniversidade} 
+  \resizebox{\textwidth}{!}{% 
+  \begin{tabular}{|c|c|} 
+  \hline 
+  \textbf{Nome Caso de Uso} & Avaliar Universidade \\ \hline 
+  \textbf{Atores} & Alunos \\ \hline 
+  \textbf{Resumo} & Sistema permite que os alunos avaliem uma universidade com base em vários critérios, como infraestrutura e qualidade acadêmica. \\ \hline 
+  \textbf{Pré-condições} & Usuário autenticado e ter acesso à universidade a ser avaliada. \\ \hline 
+  \textbf{Pós-condições} & Avaliação armazenada e disponível para revisão administrativa. \\ \hline 
+  \textbf{Ação do Autor} & \textbf{Ações do Sistema} \ \hline
+  
+  1. Usuário acessa a opção de avaliar uma universidade. & 1. Sistema apresenta formulário de avaliação. \\ \hline
+  2. Preenche os critérios de avaliação (ex.: infraestrutura, professores, etc.). & 2. Sistema valida e armazena a avaliação. \\ \hline
+  3. Envia avaliação. & 3. Sistema confirma o envio ao usuário e disponibiliza para análise. \\ \hline 
+  \textbf{Restrição / Validação} & Avaliação deve seguir diretrizes de conteúdo adequado. \\ \hline 
+  \end{tabular} } 
+\end{table}
+
+\begin{table}[htbp]
+  \caption{Caso de Uso para Filtro e Pesquisa de Universidade}
+  \label{tab:filtro-pesquisa-universidade}
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{|c|c|}
+  \hline
+  \textbf{Nome Caso de Uso} & Filtro e Pesquisa de Universidade \\ \hline
+  \textbf{Atores} & Alunos \\ \hline
+  \textbf{Resumo} & Sistema permite que os alunos filtrem e pesquisem universidades com base em critérios como localização, curso oferecido, e avaliação geral. \\ \hline
+  \textbf{Pré-condições} & Usuário autenticado. \\ \hline
+  \textbf{Pós-condições} & Exibição de universidades filtradas de acordo com os critérios estabelecidos. \\ \hline
+  \textbf{Ação do Autor} & \textbf{Ações do Sistema} \\ \hline
+  1. Usuário acessa a opção de pesquisa de universidades. & 1. Sistema apresenta campos de filtro e pesquisa. \\ \hline
+  2. Define os critérios de filtro (ex.: localidade, curso). & 2. Sistema busca universidades com base nos critérios fornecidos. \\ \hline
+  3. Executa a pesquisa. & 3. Sistema exibe os resultados filtrados. \\ \hline
+  \textbf{Restrição / Validação} & Universidades devem atender aos critérios de pesquisa inseridos pelo usuário. \\ \hline
+  \end{tabular}%
+  }
+\end{table}
+
+\begin{table}[htbp]
+  \caption{Caso de Uso para Visualizar FAQ}
+  \label{tab:visualizar-faq}
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{|c|c|}
+  \hline
+  \textbf{Nome Caso de Uso} & Visualizar FAQ \\ \hline
+  \textbf{Atores} & Alunos \\ \hline
+  \textbf{Resumo} & Sistema exibe uma lista de perguntas frequentes (FAQ) para os alunos, proporcionando respostas rápidas para dúvidas comuns. \\ \hline
+  \textbf{Pré-condições} & Usuário autenticado. \\ \hline
+  \textbf{Pós-condições} & Perguntas frequentes são exibidas de acordo com o tema selecionado. \\ \hline
+  \textbf{Ação do Autor} & \textbf{Ações do Sistema} \\ \hline
+  1. Usuário acessa a opção de visualização de FAQ. & 1. Sistema exibe a lista de perguntas frequentes disponíveis. \\ \hline
+  2. Visualiza as perguntas e respostas disponíveis. & 2. Sistema permite que o usuário selecione e visualize as respostas para cada pergunta. \\ \hline
+  \textbf{Restrição / Validação} & As perguntas frequentes exibidas devem estar organizadas por categorias e seguir as políticas do sistema. \\ \hline
+  \end{tabular}%
+  }
+\end{table}
+
+
 \section{Diagramas de Sequência}
 
 \begin{figure}[H] % Alterado para [H] para forçar o posicionamento
@@ -424,16 +484,16 @@
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{diagramas/i13-avaliac-univ.png}
-  \caption{Avaliação de Universidades}
-  \label{fig:i13-avaliac-univ}
+  \includegraphics[width=0.8\textwidth]{diagramas/i13-visualizar-faq.png}
+  \caption{Visualizar FAQ}
+  \label{fig:i13-visual-faq}
 \end{figure}
 
 \section{Diagramas de Classes}
 
 \begin{figure}[H] % Alterado para [H] para forçar o posicionamento
     \centering
-    \includegraphics[width=0.8\textwidth]{diagramas/diag-classes.png}
+    \includegraphics[width=0.8\textwidth]{diagramas/diag-classes-com-faq.png}
     \caption{Diagrama de classes do ProfScore}
     \label{fig:diag-classes}
 \end{figure}
